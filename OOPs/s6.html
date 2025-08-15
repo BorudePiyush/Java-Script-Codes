@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        class Person{
+                                    constructor(name)
+                                    {
+                                                this.name=name
+                                                document.write("<br>*****************Parent constructor")
+                                    }
+                        }
+
+                        class Employee extends Person{
+                                    constructor(id,name)
+                                    {
+                                                super(name)
+                                                this.id=id
+                                                document.write("<br>*****************Child Constructor")
+                                    }
+
+                                    disp(){
+                                                document.write("<br>**********************Employeee Details*******************<br>")
+                                                document.write(this.name+" "+this.id)
+                                    }
+                        }
+
+                        let p1=new Employee(4,"Piyush")
+                        p1.disp()
+
+                        let p2=new Employee(5,"Nishant")
+                        p2.disp()
+            </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        class Bank{
+                                    #balance //private
+
+                                    constructor(amount)
+                                    {
+                                                this.#balance=amount
+                                    }
+
+                                    //public mehod-Abstract5tion(user does not know internal logic)
+                                    
+                                    deposit(amm)
+                                    {
+                                                if(amm>0)
+                                                {
+                                                            this.#balance +=amm
+                                                            document.write(this.#balance)
+                                                            
+                                                            document.write(" Amount Deposited")
+
+                                                }else{
+                                                            document.write("Invalid Amount")
+                                                }
+                                    }
+                        }
+
+                        let a1=new Bank(2000)
+                        a1.deposit(5000)
+
+                        //document.write(a1.#balance)  encapsulation hides it
+            </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <input type="text" id="d1" name="name" placeholder="Enter Name" onkeydown="piy()" onkeyup="show()">
+            <h1 id="p2"></h1>
+
+            <script>
+                        function piy(){
+                                    document.getElementById("d1").style.background="blue"
+                                    var val=document.getElementById(d1).value;
+                                    document.getElementById("p2").innerText=val
+                        }
+
+                        function show(){
+                                    document.getElementById("d1").style.background="red"
+                                    
+                        }
+            </script>
+</body>
+</html>

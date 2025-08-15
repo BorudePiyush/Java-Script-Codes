@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+           function Payment(amount)
+           {
+               this.amount=amount;
+              
+           }
+
+           Payment.prototype.processPayment =function()
+           {
+                 document.write("proccessing  payment of  "+  this.amount)
+           };
+
+
+           //UPI payment
+              function UPIPayment(amount,upiId)
+              {
+
+                      Payment.call(this,amount);
+                      this.upiId = upiId;   
+
+              }
+              
+  //inherit from  Payment
+              UPIPayment.prototype=Object.create(Payment.prototype);
+              UPIPayment.prototype.constructor =UPIPayment;
+
+              //override method
+              UPIPayment.prototype.processPayment=function()
+              {
+
+                document.write("proccessing  UPI payment of : "+  this.upiId +" Amount :  "+this.amount)
+
+              }
+
+
+                  let p1= new  UPIPayment (200,"Piyush@2004");
+                      p1.processPayment();  
+               
+
+      </script>
+</body>
+</html>

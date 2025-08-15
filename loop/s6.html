@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        let num=123;
+                        let rev=0;
+
+                        while(num>0){
+                                    rem=num%10;
+                                    //3=123%10
+                                    //2=12%510
+                                    //1=1%10
+                                    rev= rev*10+rem
+                                    //3=0*10+3
+                                    //32=3*10+2
+                                    //321=32*10+1
+                                    num=Math.floor(num/10);
+                                    //12=123/10
+                                    //1=12/10
+                                    //0=1/10
+                        }
+                        document.write(rev)
+            </script>
+</body>
+</html>

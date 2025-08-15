@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <h1 class="d1"></h1>
+            <p>something</p>
+            <h2 class="d1">Nothing</h2>
+            <h4 class="d1">Everything</h4>
+
+            <h1 class="d1"></h1>
+            <h1 class="d1"></h1>
+            <button onclick="show()">click</button>
+
+            <script>
+                        function show(){
+                                    let s1= document.getElementsByTagName("h1")
+                                    console.log(s1)
+
+                                    for(i of s1){
+                                                i.style.color="red"
+                                                i.innerText="welcome"
+                                    }
+                        }
+            </script>
+</body>
+</html>

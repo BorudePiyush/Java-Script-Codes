@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        class emp{
+                                    //this is current innstance variable
+                                    constructor(){
+                                                this.id=4
+                                                this.name="piyush"
+                                                document.write("<br>default constructor")
+                                    }
+
+                                    disp(){
+                                                //var id=4
+                                                //var name="piyush"
+                                                document.write("<br>emp details :"+this.id+" "+this.name)
+                                    }
+                        }
+
+                        let e1=new emp()
+                        //whenever object is created constructor call bydefault
+                        e1.disp()
+                        let e2=new emp()
+                        //whenever object is created constructor call bydefault
+                        e2.disp()
+            </script>
+</body>
+</html>

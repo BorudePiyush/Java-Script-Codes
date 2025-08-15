@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        function Payment(amount)
+                        {
+                                    this.amount=amount
+                        }
+
+                        Payment.prototype.processPayment =function()
+                        {
+                                    document.write("Processing Payment of:"+this.amount)
+                        };
+
+                        //credit card payment
+                        function CreditCardPayment(amount,cardNumber)
+                        {
+                                    Payment.call(this,amount)
+                                    this.cardNumber = cardNumber
+                        }
+
+                        //inherit from Payment
+
+                        CreditCardPayment.prototype=Object.create(Payment.prototype)
+                        CreditCardPayment.prototype.constructor =CreditCardPayment
+
+                        //OVERRIDE METHOD
+                        CreditCardPayment.prototype.processPayment =function()
+                        {
+                                    document.write("Processing credit card payment of :"+this.cardNumber+" Amount : "+this.amount)
+                        }
+
+                        let p1=new CreditCardPayment(200,"123P678")
+                        p1.processPayment()
+
+            </script>
+</body>
+</html>
+
+<!-- 
+
+ polymorphism :
+  many form  ...
+  differnt objects  can share the same  method  name,
+  but  behave  differntly depenidng on object
+   
+  method ovveriding (inheritance): 
+  method overloading : js don'tsupported  true  like java ,but we  can handle differnt arguments inside one method
+
+-->

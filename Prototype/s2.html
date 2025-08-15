@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        function BankAccount(accountnumber,holdername,balance)
+                        {
+                                    this.accountnumber=accountnumber
+                                    this.holdername=holdername
+                                    this.balance=balance
+                        }
+
+                        BankAccount.prototype.deposit=function(amount)
+                        {
+                                    this.balance +=amount
+                                    document.write("Total deposit Balance :"+this.balance)
+                        }
+
+                        BankAccount.prototype.withdraw=function(amount)
+                        {
+                                    this.balance-=amount
+                                    document.write("<br>After Withdrawl :"+this.balance)
+                        }
+
+                        let acc1=new BankAccount(101,"Piyush",2000)
+                        acc1.deposit(3000)
+                        acc1.withdraw(1000)
+            </script>
+</body>
+</html>

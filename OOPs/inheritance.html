@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        class parent
+                        {
+                                    dispparent(){
+
+                                    this.parentname="Sanjay"
+                                    this.lastname="Borude"
+                                    document.write("<br>Show Parent details:"+this.parentname+" "+this.lastname)
+                        }
+            }
+
+            class child extends parent{
+                        dispchild()
+                        {
+                                    this.name="Piyush"
+                                    document.write("<br>Show Child details :"+this.name)
+                                    document.write("<br>FullName :"+this.name+" "+this.parentname+" "+this.lastname)
+                        }
+            }
+
+            let p1=new child()
+            p1.dispparent()
+            p1.dispchild()
+            </script>
+</body>
+</html>

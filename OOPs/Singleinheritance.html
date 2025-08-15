@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        class G_Parent{
+                                    sowGParent(){
+                                                this.GParentname="Haribhau"
+                                                this.lastName="Borude"
+                                                document.write("<br>Show Gparent details: " + this.GParentname + " " + this.lastName)
+                                    }
+                        }
+
+                        class Parent extends G_Parent{
+                                    dispParent(){
+                                                this.Parentname="Sanjay"
+
+                                                document.write("<br>Show Parent Details :"+this.Parentname+" "+this.lastName)
+                                    }
+                        }
+
+                        class Child extends Parent{
+                                    dispChild(){
+                                                this.Name="Piyush"
+                                                this.lastName="Borude"
+                                                document.write("<br>Show Child Details :"+this.Name+" "+this.lastName)
+                                                document.write("<br>FullName :"+this.Name+" "+this.Parentname+" "+this.GParentname+" "+this.lastName)
+                                    }
+                        }
+                        
+                        let c1=new Child()
+                        c1.sowGParent()
+                        c1.dispParent()
+                        c1.dispChild()
+                        </script>
+
+</body>
+</html>

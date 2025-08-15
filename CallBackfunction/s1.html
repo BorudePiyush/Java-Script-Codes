@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        function disp()
+                        {
+                                    document.write("<br> this is my call back function")
+                        }
+                        function show(name,x)
+                        {
+                                    document.write("<br>Welcome to"+name)
+                                    
+                                    x(); //call back function
+                        }
+
+                        show("piyush",disp)
+            </script>
+</body>
+</html>

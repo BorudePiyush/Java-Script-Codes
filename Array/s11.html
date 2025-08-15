@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                    const cart =[{id:1,name:"Mobile",price:200,inStock:true,discount:true},
+                                 {id:2,name:"HeadPhone",price:3000,inStock:false,discount:true},
+                                 {id:3,name:"I-Pad",price:600,inStock:true,discount:false},
+                                 {id:4,name:"Laptop",price:1000,inStock:false,discount:false},]
+                                 
+                                 
+                                 const outOfstockItem = cart.find((item)=> !item.inStock);
+                                 const outOfStockIndex = cart.findIndex((item)=>!item.inStock)
+
+                                 if(outOfstockItem)
+                                 {
+                                    document.write("first out of stockitem : "+outOfstockItem.name);
+                                    document.write("<br>first out of stockitem : "+ outOfStockIndex);
+                                 }else{
+                                    document.write("item is in stock")
+                                 }
+
+                                 let num =[22,44,66,1,8,9]
+                                 
+                                 let ans=num.find((i)=>{
+                                    return i>60;
+                                 })
+
+                                 let x=num.findIndex(i=>{
+                                    return i>60
+                                 })
+
+                                 document.write("<br>"+ans)
+
+                                 document.write("<br>"+x)
+            </script>
+</body>
+</html>

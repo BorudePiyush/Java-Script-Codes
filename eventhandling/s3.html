@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+
+                        div{
+                                    width: 100px;
+                                    height: 100px;
+                                    border: 2px solid black;
+                        }
+            </style>
+</head>
+<body>
+            <div onmouseenter="piy()" onmouseout="show()" id="p1"></div>
+
+            <script>
+                        function piy(){
+                                    document.getElementById("p1").innerHTML="Welcome Piyush!!"
+                                    document.getElementById("p1").style.color=""
+                                    document.getElementById("p1").style.background=""
+                        }
+
+                        function show(){
+                                    document.getElementById("p1").style.color="red"
+                                    document.getElementById("p1").style.background="blue"
+                        }
+            </script>
+</body>
+</html>

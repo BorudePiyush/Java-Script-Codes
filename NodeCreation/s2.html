@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                        div{
+                                    border: 2px solid black;
+                        }
+
+            </style>
+</head>
+<body>
+           <div id="p1">
+            <h1>Welcome to my class</h1>
+            <h2 id="p2">This my Class..</h2>
+            <h3>Join my Class...</h3>
+           </div> 
+
+           <button onclick="addnode()">Click</button>
+           <script>
+
+            function addnode(){
+                        const hed = document.createElement("h2")
+                        const node=document.createTextNode("This my new h2 tag")
+                        hed.appendChild(node)
+
+                        const child=document.getElementById("d2")
+                        document.getElementById("d1").insertBefore(hed,child)
+            }
+           </script>
+</body>
+</html>

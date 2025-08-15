@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        function Payment(amount){
+                                    this.amount=amount
+                        }
+
+                        Payment.prototype.processPayment=function()
+                        {
+                                    document.write("Processing Payment of:"+this.amount)
+                        }
+
+                        //credit card payment
+                        function CreditCardPayment(amount,cardNumber)
+                        {
+                                    Payment.call(this,amount)
+                                    this.cardNumber=cardNumber
+                        }
+
+                        CreditCardPayment.prototype=Object.create(Payment.prototype)
+                        CreditCardPayment.prototype.constructor=CreditCardPayment
+
+                        CreditCardPayment.prototype.processPayment=function()
+                        {
+                                    document.write("Processing Credit Card Payment of:"+this.amount+" Card Number:"+this.cardNumber)
+                        }
+
+                        ///UPT NUMBER
+                        function UPIPayment(amount,upiID)
+                        {
+                                    Payment.call(this,amount)
+                                    this.upiID=upiID
+                        }
+
+                        UPIPayment.prototype=Object.create(Payment.prototype)
+                        UPIPayment.prototype.constructor=UPIPayment
+
+                        UPIPayment.prototype.processPayment=function()
+                        {
+                                    document.write("Processing UPI Payment of:"+this.amount+" UPI ID:"+this.upiID)
+                        }
+
+                        let pay=[
+                        new CreditCardPayment(500,"124-5783"),
+                        new UPIPayment(300,"Piyush@2004")]
+
+                        pay.forEach(p1=>{
+                                    p1.processPayment()
+                        })
+
+            </script>
+</body>
+</html>

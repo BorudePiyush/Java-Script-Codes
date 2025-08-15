@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                   const emp =[{id:1 ,name:"piyush" ,department:"HR" ,isPresent:true, onleave: false},
+                   {id:2 ,name:"nishant" ,department:"Engineering" ,isPresent:false,onleave:false},
+                   {id:3 ,name:"rahul" ,department:"Finance" ,isPresent:true ,onleave:false},
+                   {id:4, name:"Ravi" ,department:"Marketing" ,isPresent:true ,onleave:false},
+                   {id:4,name:"nandini" ,department:"Engineering" ,isPresent:false,onleave:true}
+                   
+                   ] 
+                   
+                   const presentEmployee = emp.filter(emp =>emp.isPresent)
+                   console.log("Present Employees are:", presentEmployee)
+                   
+
+                   const employeeSummary = emp.map(emp=>({
+                        name:emp.name,
+                        department:emp.department
+                   }));
+                   document.write("<h1>Employees Data >>>>  </h1>")
+                      employeeSummary.forEach((it)=>{
+
+                          document.write(it.name+" -> "+it.department +" <br>")
+                      })
+                   
+                   const anyonleave = emp.some(emp=>({
+                        name:emp.onleave,
+                        department:emp.onleave  
+                   }))
+                   console.log("Employee on Leave :",anyonleave);
+            </script>
+</body>
+</html>

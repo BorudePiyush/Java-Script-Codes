@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        //construction function
+                        function Person(name,lastname)
+                        {
+                                    this.name=name
+                                    this.lastname=lastname
+                        }
+                        //Adddiing a variable to the prototype 
+                        Person.prototype.age=21
+
+                        //Adding a Method to the Prototype
+                        Person.prototype.fullName=function()
+                        {
+                                    document.write("FullName:"+this.name+" "+this.lastname+" "+this.age)
+                        }
+
+                        let p1=new Person("piyush","Borude")
+                        p1.fullName()
+            </script>
+</body>
+</html>
+<!-- 
+ 
+  prototype: 
+
+  in js  every object  has hodden  property called as prototype [[prototype]]
+     which can access  .prototype  in function /contructore 
+     or proto in object
+
+-->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        class Person{
+                                    constructor(){
+                                                this.name="piyush"
+                                    }
+                        }
+
+                        class Employee extends Person{
+                                    constructor(){
+                                                super()
+                                                this.id=4
+                                    }
+                                    disp(){
+                                                document.write("The Name is: "+" "+this.name+" <br>The ID is : "+this.id)
+                                    }
+                        }
+
+                        let p1=new Employee()
+                        p1.disp()
+            </script>
+</body>
+</html>

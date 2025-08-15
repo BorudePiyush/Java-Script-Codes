@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                       class emp{
+                        //this is current class instance variabe
+
+                        initili(id,name){
+                                    this.id=id;
+                                    this.name=name;
+
+                        }
+                        show(){
+                                    //var id=22
+                                    //var name="piyush"
+                                    document.write("<br>show emp details :"+this.id+" "+this.name)
+                        }
+
+                       }
+                       
+                       let e1 = new emp()
+                       e1.initili(4,"piyush")
+                       e1.show()
+
+                       document.write("<br>"+e1.id+" "+e1.name)
+
+                       let e2=new emp()
+                       e2.initili(5,"nishant")
+                       e2.show()
+
+
+            </script>
+</body>
+</html>

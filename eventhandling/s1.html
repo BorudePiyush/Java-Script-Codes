@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+         <button onclick="changeCol()">Click</button>
+         <button ondblclick="changeCol1()" id="d1">Double Click</button>
+         
+         <script>
+            function changeCol(){
+                        var b1=document.querySelector("button")
+                        b1.style.background="blue"
+                        b1.style.color="white"
+                        b1.style.padding="10px"
+            }
+
+            function changeCol1(){
+                        var b1=document.querySelector("#d1")
+                        b1.style.background="red"
+                        b1.style.color="white"
+                        b1.style.padding="50px"
+            }
+         </script>
+</body>
+</html>
+
+<!-- 
+ 
+  Event hanlding  is how  js  react  to user action like:
+  clicking a button
+  typing in a text box
+  hovering over an element
+  pressing a key ,
+
+-->

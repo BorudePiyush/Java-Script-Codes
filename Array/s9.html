@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        const cart =[
+                        {id:1 ,name:"Mobile" ,price:2000 ,available:true},
+                        {id:2 ,name:"HeadPhone" ,price:3000,available:false ,discount:true},
+                        {id:3 ,name:"I-Pad" ,price:2000 ,available:true, discount:true},
+                        {id:4 ,name:"Laptop" ,price:1000 ,availabel:true ,discount:false},
+                        ]
+
+                        //filter :only available products
+
+                        const availableproduct=cart.filter((item)=>item.available);
+
+                        //map : Get name and price of product
+
+                        const itemSummary =availableproduct.map(item=>({
+                           
+                                    name:item.name,
+                                    price:item.price
+                        }));
+
+                        document.write("<h1> available item with only name and price>>>>>></h1>")
+                        itemSummary.forEach((it)=>{
+                                    document.write(it.name+"->"+it.price+"<br>")
+                        })
+
+                        //some check if any item has a discount
+
+                        const hasDiscount = cart.some((item)=>item.discount);
+
+                        document.write("<h1> Discount item >>>> </h1>")
+
+                        console.log(hasDiscount)
+            </script>
+</body>
+</html>

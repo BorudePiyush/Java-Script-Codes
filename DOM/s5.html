@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                        .card{
+                                    width: 200px;
+                                    padding: 10px;
+                                    border: 1px solid black;
+                                    margin: 10px;
+                        }
+            </style>
+</head>
+<body>
+            <div class="card">Piyush</div>
+            <div class="card">Piyush</div>
+             <div class="card">Piyush</div>
+             
+             <button onclick="piy()">Click here</button>
+
+             <script>
+                        function piy(){
+                                    var i=document.querySelectorAll(".card")
+
+                                    i.forEach(card=>{
+                                                card.style.background="blue"
+                                    })
+
+                                    document.querySelector(".card:nth-child(2)").style.padding="20px"
+                        }
+             </script>
+</body>
+</html>

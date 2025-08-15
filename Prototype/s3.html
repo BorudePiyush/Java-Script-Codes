@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                      function  BankAccount(accountNumber , holderName ,baclance)
+            {
+                this.accountNumber=accountNumber;
+                this.holderName=holderName;
+                this.baclance=baclance;
+
+            }
+
+             BankAccount.prototype.deposite=function(amount)
+             {
+                    this.baclance +=amount
+                    document.write(" total balance  : "+ this.baclance)
+             }
+
+             BankAccount.prototype.withdrow=function(amount)
+             {
+                    if(this.baclance >= amount)
+                    {
+                        this.baclance -= amount;
+                        document.write("<br> total balance  : "+ this.baclance)
+                    }else{
+                        document.write("<br> insufficient balance!!!")
+                    }
+             }
+
+
+                let acc1 = new BankAccount(101,"meena",2000);
+                acc1.deposite(3000);
+                acc1.withdrow(1000);
+                let acc2 = new BankAccount(102,"Heena",1000);
+                acc2.withdrow(3000);    
+            </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                        div{
+                                    border: 2px solid black;
+                        }
+            </style>
+</head>
+<body>
+            <div id="p1">
+                        <h1>Welcome Piyush Borude</h1>
+                        <h2 id="p2">TO Java Class..</h2>
+                        <h3>Join my Class...</h3>
+            </div>
+
+            <button onclick="piy()">Click</button>
+
+            <script>
+
+                        function piy(){
+                                    const hed=document.createElement("h2")
+                                    const node=document.createTextNode("This my new h2  tag")
+                                    hed.appendChild(node)
+
+                                    const child=document.getElementById("p2")
+
+                                    document.getElementById("p1").replaceChild(hed,child)
+                        }
+            </script>
+</body>
+</html>

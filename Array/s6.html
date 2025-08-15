@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        let emp = [
+                        
+                           {
+                                    id:1,
+                                    name:"piyush",
+                                    salary:40000
+                           },
+                           {
+                                    id:2,
+                                    name:"nishant",
+                                    salary:50000
+                           },
+                           {
+                                    id:3,
+                                    name:"rahul",
+                                    salaryu:20000
+                           }
+                        ]
+
+                        document.write("<br>"+ emp)
+                        console.log(emp)
+
+                        for(e1 of emp)
+                        {
+                                    document.write("<br>"+e1.id+" "+e1.name+" "+e1.salary)
+                        }
+                        document.write("<br> Using for each***********")
+                        
+                        emp.forEach((e1)=>{
+                                    document.write("<br>"+e1.id+" "+e1.name+" "+e1.salary)
+                        });
+            </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        //default function without return type
+
+                        var a=4,b=2;  //global variable
+                        function Add(){
+                                    var p=2,q=3; //local variable
+                                    document.write("Addition :"+(p+q))
+                        }
+                        //default function with return type
+                        function Subtraction()
+                        {
+                                    return a-b;
+                        }
+                        //parameterised without return type
+                        function Multi(s1,s2)
+                        {
+                                    document.write("<br> Multiplication :"+(s1*s2))
+                        }
+                        //parameterised with return type
+                        function Division(s1,s2){
+                                    return s1/s2
+                        }
+
+                        Add()
+                        document.write("<br> Subtraction :"+Subtraction())
+
+                        Multi(3,5)
+                        document.write("<br> Division :"+Division(20,3))
+            </script>
+</body>
+</html>

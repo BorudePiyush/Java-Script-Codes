@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                        div{
+                                    width: 250px;
+                                    height: 250px;
+                                    border: 2px solid black;
+                                    justify-content: center;
+                                    align-items: center;
+                                    display: flex;
+                        }
+
+                        button{
+                                    padding: 10px 20px;
+                                    margin: 5px;
+                                    border: 1px solid black;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    justify-content: center;
+                                    align-items: center;
+                                 
+                        }
+
+            </style>
+</head>
+<body>
+            <h2>Color Box Change :-</h2>
+         <div id="p1" ></div> 
+         <br>
+         <button onclick="piy('red')">Red</button>
+           <button onclick="piy('blue')">Blue</button>
+             <button onclick="piy('green')">Green</button>
+
+             
+
+         <script>
+function piy(color){
+   document.getElementById('p1').style.backgroundColor = color;
+   
+}
+
+         </script>
+</body>
+</html>

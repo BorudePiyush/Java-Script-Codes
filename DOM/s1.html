@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <h1 id="d1"></h1>
+            <input type="text" id="d2" name="name" placeholder="Enter name">
+            <button onclick="show()">Click</button>
+
+            <script>
+                        function show(){
+                             document.getElementById("d1").style.color="blue"
+                             var str = document.getElementById("d2").value;
+                             console.log(str)
+                             
+                             document.getElementById("d1").innerHTML="welcome"+str
+                        }
+            </script>
+            
+</body>
+</html>

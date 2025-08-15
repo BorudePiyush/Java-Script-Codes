@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                        div{
+                                    border: 2px solid black;
+                                    background-color: lightgray;
+                        }
+            </style>
+</head>
+<body>
+        <div id="p1">
+            <h1>Welcome Piyush Sanjay Borude!!</h1>
+            <h2>This is My Class..</h2>
+            <h3 id="p2">Join My Class..</h3>
+        </div>    
+
+        <button onclick="piy()">Click Me</button>
+
+        <script>
+            function piy(){
+                        const par=document.createElement("p")
+                        const node=document.createTextNode("This is my Paragraph!!")
+
+                        par.appendChild(node)
+
+                        const child=document.getElementById("p2")
+
+                        document.getElementById("p1").insertBefore(par,child)
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+                        div{
+                                    border: 2px solid black;
+                        }
+            </style>
+</head>
+<body>
+            <div id="p1">
+                        <h1>Welcome Piyush Sanjay Borude!!</h1>
+                        <h2 id="p2">Remove Me</h2>
+                        <h3>Join My Class..</h3>
+            </div>
+
+            <button onclick="piy()">Click Me</button>
+
+            <script>
+                        function piy(){
+                                    const parent=document.getElementById("p1")
+                                    const child=document.getElementById("p2")
+                                   
+                                    parent.removeChild(child)
+                        }
+            </script>
+</body>
+</html>

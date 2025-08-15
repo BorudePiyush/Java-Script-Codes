@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <form onsubmit="submited()">
+                        <input type="text" placeholder="enter" id="p1">
+                        <input type="submit">
+
+            </form>
+
+            <script>
+                        function submited(){
+                                    fname=document.forms[0].p1.value;
+
+                                    console.log(fname)
+                                    alert("Welcome"+fname)
+                        }
+            </script>
+</body>
+</html>

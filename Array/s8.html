@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+</head>
+<body>
+            <script>
+                        const menu =[
+                        {
+                                    name:"biryani",
+                                    price:200,
+                                    isVeg:false 
+                        },
+                        {
+
+                                    name:"Paneer",
+                                    price:400,
+                                    isVeg:true 
+                        },
+                        {
+                                    name:"fish-curry",
+                                    price:700,
+                                    isVeg:false
+                        },
+                        {
+                                    name:"veg-burger",
+                                    price:200,
+                                    isVeg:true 
+                        },
+                        
+              ]
+
+                        const disp=menu.map((item)=>({
+                                    Name:item.name,
+                                    price:item.price
+                        }));
+
+                        console.log(disp)
+            </script>
+</body>
+</html>
